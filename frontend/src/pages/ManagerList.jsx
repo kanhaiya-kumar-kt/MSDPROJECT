@@ -11,14 +11,14 @@ const ManagerList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/managers")
+      .get("https://contact-manager-msdbackend.onrender.com/api/managers")
       .then((res) => setManagers(res.data))
       .catch((err) => console.error(err));
   }, []);
 
   const deleteManager = (id) => {
     axios
-      .delete(`http://localhost:5000/api/managers/${id}`)
+      .delete(`https://contact-manager-msdbackend.onrender.com/api/managers/${id}`)
       .then(() => setManagers(managers.filter((m) => m._id !== id)))
       .catch((err) => console.error(err));
   };
