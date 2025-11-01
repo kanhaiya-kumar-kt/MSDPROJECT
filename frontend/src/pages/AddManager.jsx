@@ -21,7 +21,7 @@ const AddManager = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/managers", manager);
+      await axios.post("https://contact-manager-msdbackend.onrender.com/api/managers", manager);
       alert("✅ Manager added successfully!");
       // navigate("/"); // 👈 Uncomment this if you want to redirect manually after alert
       setManager({ name: "", email: "", phone: "", department: "" }); // clear form
