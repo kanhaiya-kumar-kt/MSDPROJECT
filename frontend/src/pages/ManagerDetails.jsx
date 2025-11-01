@@ -7,7 +7,7 @@ const ManagerDetails = () => {
   const [manager, setManager] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/managers/${id}`)
+    axios.get(`https://contact-manager-msdbackend.onrender.com/api/managers/${id}`)
       .then(res => setManager(res.data))
       .catch(err => console.error(err));
   }, [id]);
